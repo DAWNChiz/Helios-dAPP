@@ -1,152 +1,90 @@
-# 🌞 Helios Staking dApp
+# 🌞 Helios-dApp
 
-A decentralized staking dApp built on the [Helios Testnet](https://testnet.helioschain.network), allowing users to stake ERC20 tokens, earn XP, and interact with verified smart contracts. This project uses **Hardhat**, **React (Vite)**, and **Ethers.js**.
-
----
-
-## 🚀 Features
-
-- ✅ Stake & withdraw tokens via a frontend interface
-- ✅ Smart contract deployed on Helios Testnet
-- ✅ React-based dApp UI using Ethers.js
-- ✅ XP Multiplier-ready (`Builder` tag eligible!)
-- ✅ Unit tests with Hardhat & Chai
-
----
-
-## 🛠 Tech Stack
-
-- Solidity (Smart Contracts)
-- Hardhat (Development & Testing)
-- React (Frontend)
-- Ethers.js (Blockchain interaction)
-- Vite (Frontend tooling)
-- Helios Testnet
-
----
+A decentralized application built on the Helios Testnet using Solidity and React, deployed and tested via Hardhat.
 
 ## 📁 Project Structure
-Helios-dAPP/ ├── contracts/          # Solidity smart contracts ├── scripts/            # Deployment scripts ├── test/               # Contract unit tests ├── src/                # React app │   └── components/     # Reusable components ├── hardhat.config.js   # Hardhat configuration ├── package.json        # Project dependencies └── README.md           # This file
+
+├── contracts/           # Solidity smart contracts ├── scripts/             # Deployment and utility scripts ├── test/                # Smart contract tests ├── src/                 # React frontend ├── artifacts/           # Contract build files (auto-generated) ├── cache/               # Hardhat cache (auto-generated) ├── hardhat.config.js    # Hardhat configuration ├── package.json         # Project metadata and dependencies └── README.md            # Project documentation
 
 ---
 
-## 🧾 Prerequisites
+## ⚙️ Getting Started
 
-- Node.js ≥ 18.x
-- [MetaMask](https://metamask.io/) installed
-- [Helios Testnet Faucet](https://faucet.helioschain.network) (for test tokens)
-- Your private key (used only in `.env`)
+### Requirements
+
+- [Node.js](https://nodejs.org) (>= v14)
+- [npm](https://www.npmjs.com/)
+- [Hardhat](https://hardhat.org)
 
 ---
 
-## 🔧 Installation
+## 🧰 Installation
 
-bash
-# Clone the repo
-git clone https://github.com/DAWNChiz/Helios-dAPP.git
-cd Helios-dAPP
+### 1. Clone the Repository
 
-# Install dependencies
+```bash
+git clone https://github.com/DAWNChiz/Helios-dApp.git
+cd Helios-dApp
+
+2. Install Dependencies
+
 npm install
 
+3. Install Frontend Dependencies
 
----
-
-🔐 Environment Setup
-
-Create a .env file in the root:
-
-PRIVATE_KEY=your_private_key_here
-
-> 🚨 Never share this key or commit .env!
-
-
+cd src
+npm install
+cd ..
 
 
 ---
 
-🧱 Compile & Deploy Smart Contracts
+🚀 Deployment
 
-npx hardhat compile
+To deploy the contract to Helios Testnet:
+
+1. Add your private key and RPC to .env:
+
+
+
+PRIVATE_KEY=your_wallet_private_key
+RPC_URL=https://rpc-testnet.helioschain.network
+
+2. Run the deployment script:
+
+
+
 npx hardhat run scripts/deploy.js --network helios
 
-Once deployed, note your contract address and update src/constants.js.
-
 
 ---
 
-🧪 Run Tests
+🧪 Running Tests
 
 npx hardhat test
 
 
 ---
 
-🌐 Run the Frontend
+🌐 Running the Frontend
 
-npm run dev
+cd src
+npm start
 
-The app runs at http://localhost:5173
-
-
----
-
-🔗 Connect to Helios Testnet
-
-MetaMask Settings:
-
-RPC: https://rpc-public.testnet.helioschain.network
-
-Chain ID: 111000
-
-Currency Symbol: tHELI
-
+The dApp will be available at http://localhost:3000.
 
 
 ---
 
-📌 XP Multiplier Tag
+🧾 License
 
-Deploying verified contracts and building this dApp qualifies you for the Builder tag on Helios:
-
-✅ 3x XP Multiplier
-
-🧠 Requires smart contract verification
-
-📎 Contribute via GitHub
-
+This project is licensed under the MIT License.
 
 
 ---
 
-📄 License
+🙌 Contribution
 
-MIT
-
-
----
-
-🤝 Contributing
-
-Pull requests are welcome! Please open an issue first if you'd like to discuss a change.
-
-
----
-
-🙌 Credits
-
-Inspired by MrBips/Helios-Staking but built fully from scratch with custom design, structure, and logic.
-
-
----
-
-🔍 Resources
-
-📘 Helios Docs: Developing dApps
-
-💡 Helios EVM + Cosmos APIs
-
-🔒 Smart Contract Guide
-
+Feel free to fork the repo, open issues, and submit pull requests.
 
 ---
