@@ -46,7 +46,6 @@ A decentralized staking dApp built on the [Helios Testnet](https://testnet.helio
 - [Helios Testnet Faucet](https://faucet.helioschain.network) (for test tokens)
 - Your private key (used only in `.env`)
 
----
 
 ## 🔧 Installation
 
