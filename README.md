@@ -59,39 +59,39 @@ npm install
 
 ## 🔐 Environment Setup
 
-```bash
-Create a .env file in the root:
+Create a `.env` file in the root directory and add the following:
 
-PRIVATE_KEY=your_private_key_here
-
-> 🚨 Never share this key or commit .env!
+```
+PRIVATE_KEY=your_wallet_private_key
+RPC_URL=https://rpc-testnet.helioschain.network
 ```
 
 ## 🧱 Compile & Deploy Smart Contracts
 
+```bash
 npx hardhat compile
-npx hardhat run scripts/deploy.js --network helios
+```
 
-Once deployed, note your contract address and update src/constants.js.
+## ✅ Deploy to Helios Testnet
 
+```bash
+npx hardhat run scripts/deploy.js --network heliosTestnet
+```
 
----
 
 ## 🧪 Run Tests
 ```bash
 npx hardhat test
 ```
 
----
 
 ## 🌐 Run the Frontend
-
-npm run dev
+```bash
+cd src
+npm start
 
 The app runs at http://localhost:5173
-
-
----
+```
 
 ## 🔗 Connect to Helios Testnet
 
@@ -105,8 +105,6 @@ Currency Symbol: tHELI
 
 
 
----
-
 ## 📌 XP Multiplier Tag
 
 Deploying verified contracts and building this dApp qualifies you for the Builder tag on Helios:
@@ -119,21 +117,16 @@ Deploying verified contracts and building this dApp qualifies you for the Builde
 
 
 
----
-
 ## 📄 License
 
 MIT
 
-
----
 
 ## 🤝 Contributing
 
 Pull requests are welcome! Please open an issue first if you'd like to discuss a change.
 
 
----
 
 ## 🔍 Resources
 
@@ -144,49 +137,3 @@ Pull requests are welcome! Please open an issue first if you'd like to discuss a
 🔒 Smart Contract Guide
 
 
----
-
-
-
-
-## Environment Setup
-
-Create a `.env` file in the root directory and add the following:
-
-```
-PRIVATE_KEY=your_wallet_private_key
-RPC_URL=https://rpc-testnet.helioschain.network
-```
-
-## Compile Contracts
-
-```bash
-npx hardhat compile
-```
-
-## Run Tests
-
-```bash
-npx hardhat test
-```
-
-## Deploy to Helios Testnet
-
-```bash
-npx hardhat run scripts/deploy.js --network heliosTestnet
-```
-
-## Frontend
-
-To run the frontend app:
-
-```bash
-cd src
-npm start
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## License
-
-MIT
