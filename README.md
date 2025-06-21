@@ -50,16 +50,6 @@ A decentralized staking dApp built on the [Helios Testnet](https://testnet.helio
 ## 🔧 Installation
 
 ```bash
-# Clone the repo
-git clone https://github.com/DAWNChiz/Helios-dAPP.git
-cd Helios-dAPP
-
-# Install dependencies
-npm install
-
-## Installation
-
-```bash
 git clone https://github.com/DAWNChiz/Helios-dApp.git
 cd Helios-dApp
 npm install
