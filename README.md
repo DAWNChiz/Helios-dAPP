@@ -1,6 +1,31 @@
-# 🌞 Helios-dApp
+# 🌞 Helios Staking dApp
 
-A decentralized staking dApp built for the Helios Testnet using Solidity, Hardhat, and React.
+A decentralized staking dApp built on the [Helios Testnet](https://testnet.helioschain.network), allowing users to stake ERC20 tokens, earn XP, and interact with verified smart contracts. This project uses **Hardhat**, **React (Vite)**, and **Ethers.js**.
+
+---
+
+## 🚀 Features
+
+- ✅ Stake & withdraw tokens via a frontend interface
+- ✅ Smart contract deployed on Helios Testnet
+- ✅ React-based dApp UI using Ethers.js
+- ✅ XP Multiplier-ready (`Builder` tag eligible!)
+- ✅ Unit tests with Hardhat & Chai
+
+---
+
+## 🛠 Tech Stack
+
+- Solidity (Smart Contracts)
+- Hardhat (Development & Testing)
+- React (Frontend)
+- Ethers.js (Blockchain interaction)
+- Vite (Frontend tooling)
+- Helios Testnet
+
+---
+
+## 📁 Project Structure
 
 ```
 ├── contracts/           # Solidity smart contracts
