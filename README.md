@@ -41,7 +41,7 @@ Helios-dAPP/ ├── contracts/          # Solidity smart contracts ├── 
 
 ## 🔧 Installation
 
-```bash
+bash
 # Clone the repo
 git clone https://github.com/DAWNChiz/Helios-dAPP.git
 cd Helios-dAPP
