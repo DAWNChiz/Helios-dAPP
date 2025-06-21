@@ -1,90 +1,74 @@
 # 🌞 Helios-dApp
 
-A decentralized application built on the Helios Testnet using Solidity and React, deployed and tested via Hardhat.
+A decentralized staking dApp built for the Helios Testnet using Solidity, Hardhat, and React.
 
-## 📁 Project Structure
+```
+├── contracts/           # Solidity smart contracts
+├── scripts/             # Deployment and utility scripts
+├── test/                # Smart contract tests
+├── src/                 # React frontend
+├── artifacts/           # Contract build files (auto-generated)
+├── cache/               # Hardhat cache (auto-generated)
+├── hardhat.config.js    # Hardhat configuration
+├── package.json         # Project metadata and dependencies
+└── README.md            # Project documentation
+```
 
-├── contracts/           # Solidity smart contracts ├── scripts/             # Deployment and utility scripts ├── test/                # Smart contract tests ├── src/                 # React frontend ├── artifacts/           # Contract build files (auto-generated) ├── cache/               # Hardhat cache (auto-generated) ├── hardhat.config.js    # Hardhat configuration ├── package.json         # Project metadata and dependencies └── README.md            # Project documentation
+## Requirements
 
----
+- [Node.js](https://nodejs.org) >= v14  
+- [npm](https://www.npmjs.com/)  
+- [Hardhat](https://hardhat.org)  
 
-## ⚙️ Getting Started
-
-### Requirements
-
-- [Node.js](https://nodejs.org) (>= v14)
-- [npm](https://www.npmjs.com/)
-- [Hardhat](https://hardhat.org)
-
----
-
-## 🧰 Installation
-
-### 1. Clone the Repository
+## Installation
 
 ```bash
 git clone https://github.com/DAWNChiz/Helios-dApp.git
 cd Helios-dApp
-
-2. Install Dependencies
-
 npm install
-
-3. Install Frontend Dependencies
-
 cd src
 npm install
 cd ..
+```
 
+## Environment Setup
 
----
+Create a `.env` file in the root directory and add the following:
 
-🚀 Deployment
-
-To deploy the contract to Helios Testnet:
-
-1. Add your private key and RPC to .env:
-
-
-
+```
 PRIVATE_KEY=your_wallet_private_key
 RPC_URL=https://rpc-testnet.helioschain.network
+```
 
-2. Run the deployment script:
+## Compile Contracts
 
+```bash
+npx hardhat compile
+```
 
+## Run Tests
 
-npx hardhat run scripts/deploy.js --network helios
-
-
----
-
-🧪 Running Tests
-
+```bash
 npx hardhat test
+```
 
+## Deploy to Helios Testnet
 
----
+```bash
+npx hardhat run scripts/deploy.js --network heliosTestnet
+```
 
-🌐 Running the Frontend
+## Frontend
 
+To run the frontend app:
+
+```bash
 cd src
 npm start
+```
 
-The dApp will be available at http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## License
 
----
-
-🧾 License
-
-This project is licensed under the MIT License.
-
-
----
-
-🙌 Contribution
-
-Feel free to fork the repo, open issues, and submit pull requests.
-
----
+MIT
