@@ -39,11 +39,24 @@ A decentralized staking dApp built on the [Helios Testnet](https://testnet.helio
 └── README.md            # Project documentation
 ```
 
-## Requirements
+## 🧾 Prerequisites
 
-- [Node.js](https://nodejs.org) >= v14  
-- [npm](https://www.npmjs.com/)  
-- [Hardhat](https://hardhat.org)  
+- Node.js ≥ 18.x
+- [MetaMask](https://metamask.io/) installed
+- [Helios Testnet Faucet](https://faucet.helioschain.network) (for test tokens)
+- Your private key (used only in `.env`)
+
+---
+
+## 🔧 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/DAWNChiz/Helios-dAPP.git
+cd Helios-dAPP
+
+# Install dependencies
+npm install
 
 ## Installation
 
