@@ -1,47 +1,38 @@
 import { useState } from "react";
 import { ethers } from "ethers";
+import StakeCard from "./components/StakeCard";
 import DawnStakerABI from "./abis/DawnStaker.json";
 
 const CONTRACT_ADDRESS = "0xYourContractAddress";
 
 function App() {
-  const [amount, setAmount] = useState("");
-  const [provider, setProvider] = useState(null);
   const [contract, setContract] = useState(null);
 
   const connect = async () => {
-    const ethProvider = new ethers.providers.Web3Provider(window.ethereum);
-    await ethProvider.send("eth_requestAccounts", []);
-    const signer = ethProvider.getSigner();
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
     const staker = new ethers.Contract(CONTRACT_ADDRESS, DawnStakerABI, signer);
-    setProvider(ethProvider);
     setContract(staker);
   };
 
-  const stake = async () => {
-    if (!contract) return;
+  const handleStake = async (amount) => {
     const tx = await contract.stake(ethers.utils.parseEther(amount));
     await tx.wait();
   };
 
-  const withdraw = async () => {
-    if (!contract) return;
+  const handleWithdraw = async (amount) => {
     const tx = await contract.withdraw(ethers.utils.parseEther(amount));
     await tx.wait();
   };
 
   return (
     <div className="p-6">
-      <h1 className="text-xl font-bold">Dawn Staking dApp</h1>
-      <button onClick={connect}>Connect Wallet</button>
-      <input
-        type="number"
-        placeholder="Amount"
-        onChange={(e) => setAmount(e.target.value)}
-        className="border px-2"
-      />
-      <button onClick={stake}>Stake</button>
-      <button onClick={withdraw}>Withdraw</button>
+      <h1 className="text-xl font-bold mb-4">Dawn Staking dApp</h1>
+      <button onClick={connect} className="mb-4 bg-green-600 text-white px-4 py-2 rounded">
+        Connect Wallet
+      </button>
+      {contract && <StakeCard onStake={handleStake} onWithdraw={handleWithdraw} />}
     </div>
   );
 }
