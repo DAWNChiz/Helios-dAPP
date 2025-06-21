@@ -55,8 +55,99 @@ cd Helios-dApp
 npm install
 cd src
 npm install
-cd ..
 ```
+
+## 🔐 Environment Setup
+
+```bash
+Create a .env file in the root:
+
+PRIVATE_KEY=your_private_key_here
+
+> 🚨 Never share this key or commit .env!
+```
+
+## 🧱 Compile & Deploy Smart Contracts
+
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network helios
+
+Once deployed, note your contract address and update src/constants.js.
+
+
+---
+
+## 🧪 Run Tests
+```bash
+npx hardhat test
+```
+
+---
+
+## 🌐 Run the Frontend
+
+npm run dev
+
+The app runs at http://localhost:5173
+
+
+---
+
+## 🔗 Connect to Helios Testnet
+
+MetaMask Settings:
+
+RPC: https://rpc-public.testnet.helioschain.network
+
+Chain ID: 111000
+
+Currency Symbol: tHELI
+
+
+
+---
+
+## 📌 XP Multiplier Tag
+
+Deploying verified contracts and building this dApp qualifies you for the Builder tag on Helios:
+
+✅ 3x XP Multiplier
+
+🧠 Requires smart contract verification
+
+📎 Contribute via GitHub
+
+
+
+---
+
+## 📄 License
+
+MIT
+
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! Please open an issue first if you'd like to discuss a change.
+
+
+---
+
+## 🔍 Resources
+
+📘 Helios Docs: Developing dApps
+
+💡 Helios EVM + Cosmos APIs
+
+🔒 Smart Contract Guide
+
+
+---
+
+
+
 
 ## Environment Setup
 
